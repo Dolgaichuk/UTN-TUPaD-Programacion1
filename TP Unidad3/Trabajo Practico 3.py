@@ -138,3 +138,157 @@ print("")
 print("La moda es: ", moda)   
 print("La mediana es: ", mediana)
 print("La media es: ", media) 
+
+# 7) Escribir un programa que solicite una frase o palabra al usuario. Si el string ingresado
+# termina con vocal, añadir un signo de exclamación al final e imprimir el string resultante por
+# pantalla; en caso contrario, dejar el string tal cual lo ingresó el usuario e imprimirlo por
+#pantalla.
+
+print ("Ejercicio 7")
+print (" ") 
+frase = ""
+frase =input("Por favor, ingresá una frase o palabra: ") 
+print("")
+# Verifica si termina con vocal
+if frase[-1].lower() in ['a', 'e', 'i', 'o', 'u']:
+   #añade el signo de exclamación
+   frase = frase + "!"
+#imprime el resultado
+print(frase)   
+
+# 8) Escribir un programa que solicite al usuario que ingrese su nombre y el número 1, 2 o 3
+# dependiendo de la opción que desee:
+# 1. Si quiere su nombre en mayúsculas. Por ejemplo: PEDRO.
+# 2. Si quiere su nombre en minúsculas. Por ejemplo: pedro.
+# 3. Si quiere su nombre con la primera letra mayúscula. Por ejemplo: Pedro.
+# El programa debe transformar el nombre ingresado de acuerdo a la opción seleccionada por el
+# usuario e imprimir el resultado por pantalla. Nota: investigue uso de las funciones upper(),
+# lower() y title() de Python para convertir entre mayúsculas y minúsculas.   
+print ("Ejercicio 8")
+print (" ") 
+nombre = ""
+nombre =input("Por favor, ingresá tu nombre: ") 
+print("")
+opcion = 0
+opcion =int(input("Por favor, ingresá el número 1, 2 o 3 dependiendo de la opción que desees: \n1. Si querés tu nombre en mayúsculas. \n2. Si querés tu nombre en minúsculas. \n3. Si querés tu nombre con la primera letra mayúscula. \n"))
+print("")
+# Verifica la opción seleccionada
+if opcion == 1:
+   #convierte a mayúsculas
+   nombre = nombre.upper() 
+   #imprime el resultado
+   print(nombre)
+elif opcion == 2:
+   #convierte a minúsculas
+   nombre = nombre.lower() 
+   #imprime el resultado
+   print(nombre)
+elif opcion == 3:
+   #convierte la primera letra a mayúscula
+   nombre = nombre.title() 
+   #imprime el resultado
+   print(nombre)
+else:
+   #muestra el mensaje
+   print("Opción no válida")  
+
+# 9) Escribir un programa que pida al usuario la magnitud de un terremoto, clasifique la
+# magnitud en una de las siguientes categorías según la escala de Richter e imprima el resultado
+# por pantalla:
+# ● Menor que 3: "Muy leve" (imperceptible).
+# ● Mayor o igual que 3 y menor que 4: "Leve" (ligeramente perceptible).
+# ● Mayor o igual que 4 y menor que 5: "Moderado" (sentido por personas, pero
+# generalmente no causa daños).
+# ● Mayor o igual que 5 y menor que 6: "Fuerte" (puede causar daños en estructuras
+# débiles).
+# ● Mayor o igual que 6 y menor que 7: "Muy Fuerte" (puede causar daños significativos).
+# ● Mayor o igual que 7: "Extremo" (puede causar graves daños a gran escala).
+print ("Ejercicio 9")
+print (" ") 
+magnitud = 0.0
+magnitud =float(input("Por favor, ingresá la magnitud del terremoto: "))      
+print("")
+# Verifica la categoría según la escala de Richter
+if magnitud < 3:
+   #muestra el mensaje
+   print("Muy leve (imperceptible)")
+elif magnitud >= 3 and magnitud < 4:
+   #muestra el mensaje
+   print("Leve (ligeramente perceptible)")   
+elif magnitud >= 4 and magnitud < 5:
+   #muestra el mensaje
+   print("Moderado (sentido por personas, pero generalmente no causa daños)") 
+elif magnitud >= 5 and magnitud < 6:
+   #muestra el mensaje
+   print("Fuerte (puede causar daños en estructuras débiles)")
+elif magnitud >= 6 and magnitud < 7:
+   #muestra el mensaje
+   print("Muy Fuerte (puede causar daños significativos)")     
+else: 
+   #muestra el mensaje
+   print("Extremo (puede causar graves daños a gran escala)")
+
+# 10) Utilizando la información aportada en la siguiente tabla sobre las estaciones del año
+# Periodo del año
+# Estación en el
+# hemisferio norte
+# Estación en el
+# hemisferio sur
+# Desde el 21 de diciembre hasta el 20 de
+# marzo (incluidos)
+# Invierno Verano
+# Desde el 21 de marzo hasta el 20 de junio
+# (incluidos)
+# Primavera Otoño
+# Desde el 21 de junio hasta el 20 de
+# septiembre (incluidos)
+# Verano Invierno
+# Desde el 21 de septiembre hasta el 20 de
+# diciembre (incluidos)
+# Otoño Primavera
+# Escribir un programa que pregunte al usuario en cuál hemisferio se encuentra (N/S), qué mes
+# del año es y qué día es. El programa deberá utilizar esa información para imprimir por pantalla
+# si el usuario se encuentra en otoño, invierno, primavera o verano.
+
+print ("Ejercicio 10")
+print (" ")
+hemisferio = ""
+hemisferio =input("Por favor, ingresá en cuál hemisferio te encontrás (N/S): ")
+mes = 0
+mes =int(input("Por favor, ingresá el mes del año (1-12): "))
+dia = 0
+dia =int(input("Por favor, ingresá el día del mes (1-31): "))
+print("")
+# Verifica la estación según el hemisferio, mes y día
+if hemisferio.upper() == "N":
+   if (mes == 12 and dia >= 21) or (mes <= 3 and dia <= 20) or (mes < 3):
+      print("Invierno")
+   elif (mes == 3 and dia >= 21) or (mes <= 6 and dia <= 20) or (mes < 6):
+      print("Primavera")
+   elif (mes == 6 and dia >= 21) or (mes <= 9 and dia <= 20) or (mes < 9):
+      print("Verano")
+   elif (mes == 9 and dia >= 21) or (mes <= 12 and dia <= 20) or (mes < 12):
+      print("Otoño")
+   else:
+      print("Fecha no válida")   
+elif hemisferio.upper() == "S":
+   if (mes == 12 and dia >= 21) or (mes <= 3 and dia <= 20) or (mes < 3):
+      print("Verano")
+   elif (mes == 3 and dia >= 21) or (mes <= 6 and dia <= 20) or (mes < 6):
+      print("Otoño")
+   elif (mes == 6 and dia >= 21) or (mes <= 9 and dia <= 20) or (mes < 9):
+      print("Invierno")
+   elif (mes == 9 and dia >= 21) or (mes <= 12 and dia <= 20) or (mes < 12):
+      print("Primavera")
+   else:
+      print("Fecha no válida")
+
+else:
+   print("Hemisferio no válido")
+   
+
+
+
+
+
+
