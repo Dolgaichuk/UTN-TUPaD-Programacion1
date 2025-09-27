@@ -150,7 +150,7 @@ frase = ""
 frase =input("Por favor, ingresá una frase o palabra: ") 
 print("")
 # Verifica si termina con vocal
-if frase[-1].lower() in ['a', 'e', 'i', 'o', 'u']:
+if frase[-1] =='a' or 'e'or 'i' or 'o'or'u':
    #añade el signo de exclamación
    frase = frase + "!"
 #imprime el resultado
@@ -253,14 +253,14 @@ else:
 print ("Ejercicio 10")
 print (" ")
 hemisferio = ""
-hemisferio =input("Por favor, ingresá en cuál hemisferio te encontrás (N/S): ")
+hemisferio =str(input("Por favor, ingresá en cuál hemisferio te encontrás (N/S): "))
 mes = 0
 mes =int(input("Por favor, ingresá el mes del año (1-12): "))
 dia = 0
 dia =int(input("Por favor, ingresá el día del mes (1-31): "))
 print("")
 # Verifica la estación según el hemisferio, mes y día
-if hemisferio.upper() == "N":
+if hemisferio == "N":
    if (mes == 12 and dia >= 21) or (mes <= 3 and dia <= 20) or (mes < 3):
       print("Invierno")
    elif (mes == 3 and dia >= 21) or (mes <= 6 and dia <= 20) or (mes < 6):
@@ -271,7 +271,7 @@ if hemisferio.upper() == "N":
       print("Otoño")
    else:
       print("Fecha no válida")   
-elif hemisferio.upper() == "S":
+elif hemisferio == "S":
    if (mes == 12 and dia >= 21) or (mes <= 3 and dia <= 20) or (mes < 3):
       print("Verano")
    elif (mes == 3 and dia >= 21) or (mes <= 6 and dia <= 20) or (mes < 6):
