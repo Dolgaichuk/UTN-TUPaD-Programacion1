@@ -30,8 +30,7 @@ Sigue estos pasos para ejecutar y probar el sistema:
 1.  **Clonar el Repositorio:**
     Abre tu terminal y descarga el proyecto:
     ```bash
-    git clone (https://github.com/Tadeee07/UTN-TUPaDProgramacion1-.git)
-                (https://github.com/Dolgaichuk/UTN-TUPaD-Programacion1/blob/main/TPI%20Integrador%20II/Dolgaichuk%20TPI%20II.py
+           https://github.com/Dolgaichuk/UTN-TUPaD-Programacion1/blob/main/TPI%20Integrador%20II/Dolgaichuk%20TPI%20II.py
     ```
 
 2.  **Verificar Archivos:**
